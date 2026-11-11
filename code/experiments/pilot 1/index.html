@@ -124,14 +124,14 @@ const QUESTIONS = {
 };
 const QUESTION_ORDERS = [['compensatory', 'punitive'], ['punitive', 'compensatory']];
 let questionOrder = QUESTION_ORDERS[randomInt(QUESTION_ORDERS.length)].slice();
-const ATTENTION_QUESTION = '21 is an even number.';
+const ATTENTION_QUESTION = 'Twenty-one is an even number.';
 function questionFor(c, type) {
   return QUESTIONS[type].replace('{plaintiff}', c.plaintiff).replace('{company}', c.company);
 }
 const CHECKS={punitive_check:{question:'Are punitive damages intended to punish the company being sued and discourage similar conduct?',correct:'yes'},compensatory_check:{question:'Are compensatory damages intended to compensate for harm and losses?',correct:'yes'}};
 function caseStages() { return ['read', ...questionOrder]; }
 const STAGE_LABELS={read:'Read case',compensatory:'Compensatory rating',punitive:'Punitive rating'};
-const VERSION='magna-offline-review-2026-11-11-v6';
+const VERSION='magna-offline-review-2026-11-11-v7';
 const SOURCE='https://docs.google.com/document/d/1oLGjqQyQle6a6qhMKSGFK2zdYTmyyLth1tSM5gDxU7A/edit';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -158,12 +158,13 @@ function assignmentFor(number) {
 let assignmentNumber=randomInt(assignmentCount)+1,assignment=shuffle(assignmentFor(assignmentNumber));
 let mode='session',screenIndex=0,inspectIndex=0,inspectStage='read',shownAt=performance.now();
 let sessionId=makeId(),records=[],history=[],attentionRecords=[];
+let activeScreen=null;
 let consented=false,declined=false,demographicValues=null,feedbackValue='',finished=false;
 let checkAnswers={},checkRecords=[],checkAttempt=0,checksPassed=false,showCheckReminder=false;
 const materials={shared:{"consent_title": "CONSENT FORM", "consent_study_overview": "Thank you for agreeing to take part in this study. We appreciate your time and effort. In this study, we will present you with fictional scenarios and ask you to answer a brief series of questions about them. The questions have no right or wrong answers—we’re exploring features of human psychology in this research. You will be paid for your time and effort. We do not anticipate any risks from participating in this research. While you will not directly benefit from taking part in this research study, we hope society and the scientific community will benefit from the knowledge gained about human psychology and judgment.", "consent_duration_voluntary": "Your involvement is expected to take no more than 10 minutes. Your participation is voluntary and you can stop at any time. If you consent to take part in this study, please indicate so below. If not, you may exit the study.", "consent_privacy": "The research data will be collected anonymously. We will not ask you to provide personally identifiable information such as your name or email address, and we will not be able to link your responses to you. We anticipate that your participation presents no greater risk than everyday use of the Internet. Please note that there is always a possible risk of intrusion by outside agents whenever information is shared over the Internet.", "consent_contact": "If you have any questions about the research study, please contact Shaun Nichols (sbn44@cornell.edu) at Cornell University. If you have any questions or concerns regarding your rights as a subject in this study, you may contact the Institutional Review Board (IRB) for Human Participants at 607-255-5138 or access their website at http://www.irb.cornell.edu. You may also report your concerns or complaints anonymously through Ethicspoint online at www.hotline.cornell.edu or by calling toll free at 1-866-293-3077. Ethicspoint is an independent organization that serves as a liaison between the University and the person bringing the complaint so that anonymity can be ensured.", "consent_rights": "Taking part in this study is voluntary. You can stop at any time. Withdrawal or refusal to participate will not result in any penalty. You do not waive any legal rights or release any agent from liability for negligence by consenting to participate.", "consent_prompt": "If you consent to take part in this study, please indicate so below:", "consent_button_yes": "I consent", "consent_button_no": "I do NOT consent", "instructions_intro": "In this study, you will read a series of short situations. After each situation, you will be asked to make judgments about different sentences describing what happened.", "instructions_read_carefully": "Please read each situation and sentence carefully before answering.", "button_begin_study": "Begin study", "button_continue": "Continue", "button_next": "Next", "demo_sex_question": "Please indicate your sex.", "demo_sex_male": "Male", "demo_sex_female": "Female", "demo_sex_other": "Other", "demo_sex_prefer_not": "Prefer not to answer", "demo_age_question": "Please indicate your age (in years).", "demo_age_instruction": "Enter a whole number from 18 to 120.", "demo_birth_country_question": "What country were you born in?", "demo_birth_country_open": "[Open text]", "demo_current_country_question": "What country do you currently live in?", "demo_current_country_open": "[Open text]", "demo_race_ethnicity_question": "What is your race or ethnicity?", "demo_race_ethnicity_open": "[Open text]", "demo_first_language_question": "What is your native or first language?", "demo_first_language_open": "[Open text]", "demo_other_languages_question": "Do you speak any other languages?", "demo_other_languages_no": "No", "demo_other_languages_yes": "Yes", "demo_other_languages_if_yes": "If yes, please list each language you speak:", "demo_other_languages_open": "[Open text]", "demo_everyday_language_question": "What language do you currently use most often in everyday life?", "demo_everyday_language_open": "[Open text]"}};
 const config={duration:'about 10 minutes',compensation:'You will be paid $1.50 for your time and efforts.'};
 function makeId(){return 'review-'+Date.now().toString(36)+'-'+randomInt(1000000).toString(36)}
-function screens(){return [{stage:'consent'},{stage:'instructions'},{stage:'punitive_check'},{stage:'compensatory_check'},...assignment.flatMap((c,i)=>caseStages().map(stage=>({stage,case:c,position:i+1}))),{stage:'demographics'},{stage:'feedback'},{stage:'attention_check'},{stage:'complete'}]}
+function screens(){return [{stage:'consent'},{stage:'instructions'},{stage:'punitive_check'},{stage:'compensatory_check'},...assignment.flatMap((c,i)=>caseStages().map(stage=>({stage,case:c,position:i+1}))),{stage:'attention_check'},{stage:'demographics'},{stage:'feedback'},{stage:'complete'}]}
 function current(){return declined?{stage:'declined'}:mode==='session'?screens()[screenIndex]:{stage:inspectStage,case:BANK[inspectIndex],position:1}}
 function keyFor(c,q,pos){return `${sessionId}|${mode}|${pos}|${c.id}|${q}`}
 function prior(c,q,pos){return records.find(r=>r.key===keyFor(c,q,pos))}
@@ -235,7 +236,16 @@ $('response-count').textContent=`${records.length} review ratings in this tab`;
 $('assignment-table').innerHTML=assignment.map((c,i)=>`<tr><td>${i+1}</td><td>${c.id}</td><td>${CONTEXTS[c.context]}</td><td>${CATEGORIES[c.category]}</td><td>${OUTCOMES[c.id.slice(-1)]}</td></tr>`).join('');
 $('assignment-description').textContent=`Assignment pattern ${assignmentNumber} of ${assignmentCount}. Case order: ${assignment.map(c=>c.id).join(' → ')}. Question order: ${questionOrder.join(' → ')}.`;
 }
-function render(keepQuestionPosition=false){const oldY=window.scrollY,s=current();shownAt=performance.now();$('study').innerHTML=screenHTML(s);updatePanel();
+function render(keepQuestionPosition=false){
+const oldY=window.scrollY;
+if(activeScreen){
+  const endedAt=new Date().toISOString();
+  history.push({...activeScreen,rt_ms:Math.round(performance.now()-shownAt),ended_at:endedAt,recorded_at:endedAt});
+}
+const s=current();
+shownAt=performance.now();
+activeScreen={session_id:sessionId,mode,case_id:s.case?.id||null,case_position:s.position||null,stage:s.stage,started_at:new Date().toISOString()};
+$('study').innerHTML=screenHTML(s);updatePanel();
 document.querySelectorAll('input[name="rating"]').forEach(input=>input.addEventListener('change',()=>{$('continue').disabled=false}));
 $('continue')?.addEventListener('click',advance);
 if(s.stage==='attention_check'){
@@ -309,15 +319,6 @@ function advance() {
     records = records.filter(record => record.key !== key);
     records.push(record);
   }
-  history.push({
-    session_id: sessionId,
-    mode,
-    case_id: s.case?.id || null,
-    case_position: s.position || null,
-    stage: s.stage,
-    rt_ms: rt,
-    recorded_at: new Date().toISOString()
-  });
   if (mode === 'session') {
     screenIndex++;
     render(s.stage === questionOrder[0]);
@@ -334,6 +335,9 @@ function advance() {
 function inspectSelected(){const c=BANK.find(c=>c.context===$('context').value&&c.category===$('category').value&&c.id.endsWith($('outcome').value));declined=false;inspectIndex=BANK.indexOf(c);inspectStage=$('inspect-stage').value;mode='inspect';render()}
 function moveScreen(delta){declined=false;if(mode==='session')screenIndex=Math.max(0,Math.min(screens().length-1,screenIndex+delta));else inspectStage=caseStages()[Math.max(0,Math.min(caseStages().length-1,caseStages().indexOf(inspectStage)+delta))];render()}
 function payload() {
+  const screenHistory = activeScreen
+    ? [...history, {...activeScreen, rt_ms: Math.round(performance.now() - shownAt), ended_at: null, recorded_at: new Date().toISOString()}]
+    : history.slice();
   const sessionRecords = records.filter(record => record.mode === 'session' && record.session_id === sessionId);
   const attentionAnswered = attentionRecords.some(record => record.session_id === sessionId);
   return {
@@ -356,14 +360,14 @@ function payload() {
     questions: QUESTIONS,
     question_order: questionOrder.slice(),
     attention_checks: attentionRecords,
-    reading_times: history.filter(record => record.stage === 'read'),
+    reading_times: screenHistory.filter(record => record.stage === 'read'),
     consented,
     comprehension: { passed: checksPassed, attempts: checkRecords.filter(record => record.session_id === sessionId) },
     demographics: demographicValues,
     feedback: feedbackValue,
     completed: finished && attentionAnswered && sessionRecords.length === assignment.length * Object.keys(QUESTIONS).length,
     records: records.map(({ key, ...record }) => record),
-    screen_history: history
+    screen_history: screenHistory
   };
 }
 function download(type) {
