@@ -105,7 +105,7 @@ button,input,select,textarea{font:inherit}button,.jspsych-btn{border:1px solid #
   <div class="review-row"><label class="wide">Walkthrough screen<select id="screen"></select></label><button id="previous-screen">Previous screen</button><button id="next-screen">Next screen</button><button id="start-session">Start three-case walkthrough</button><button id="new-session">New three-case set</button></div>
   <div class="review-row"><button id="download-json">Download review JSON</button><button id="download-csv">Download review CSV</button><span class="small muted" id="response-count"></span></div>
   <p id="review-status" role="status"></p>
-  <details id="design-details"><summary>Current assignment and design notes</summary><div class="table-wrap"><table><thead><tr><th>Order</th><th>Case</th><th>Context</th><th>Category</th><th>Outcome</th></tr></thead><tbody id="assignment-table"></tbody></table></div><p id="assignment-description"></p><p>Each walkthrough has three distinct contexts, three distinct categories, and one case for each outcome. Story order is randomized. The two question orders are randomized between sessions and stay fixed across all three cases within a session.</p><p>Assignments are sampled uniformly from the possible patterns. The complete set of patterns balances every context × category × outcome combination. Random sampling does not guarantee exact balance in a small sample; a deployed study will need coordinated allocation.</p><p>The participant screens use a seven-point scale, from 1 (Not at all strong) to 7 (Extremely strong). “Plaintiff” means the party seeking an award; the company is the defendant. The case narratives are copied from the Magna Pilot document.</p><p>The consent, optional demographics, feedback form, page styling, and buttons follow the cross-cultural causal-verb pilot. This offline review does not submit responses. Review responses exist only in this open tab unless downloaded. Exported responses are marked as review data.</p></details>
+  <details id="design-details"><summary>Current assignment and design notes</summary><div class="table-wrap"><table><thead><tr><th>Order</th><th>Case</th><th>Context</th><th>Category</th><th>Outcome</th></tr></thead><tbody id="assignment-table"></tbody></table></div><p id="assignment-description"></p><p>Each walkthrough has three distinct contexts, three distinct categories, and one case for each outcome. Story order is randomized. Compensatory damages are always asked about first, followed by punitive damages, for all three cases.</p><p>Assignments are sampled uniformly from the possible patterns. The complete set of patterns balances every context × category × outcome combination. Random sampling does not guarantee exact balance in a small sample; a deployed study will need coordinated allocation.</p><p>The participant screens use a seven-point scale, from 1 (Not at all strong) to 7 (Extremely strong). “Plaintiff” means the party seeking an award; the company is the defendant. The case narratives are copied from the Magna Pilot document.</p><p>The consent, optional demographics, feedback form, page styling, and buttons follow the cross-cultural causal-verb pilot. This offline review does not submit responses. Review responses exist only in this open tab unless downloaded. Exported responses are marked as review data.</p></details>
  </div>
 </aside>
 <main id="jspsych-target"><div id="study" tabindex="-1"></div></main>
@@ -122,8 +122,7 @@ const QUESTIONS = {
   compensatory: 'How strong is your desire to award the plaintiff, {plaintiff}, compensatory damages?',
   punitive: 'How strong is your desire to award punitive damages against the company, {company}?'
 };
-const QUESTION_ORDERS = [['compensatory', 'punitive'], ['punitive', 'compensatory']];
-let questionOrder = QUESTION_ORDERS[randomInt(QUESTION_ORDERS.length)].slice();
+const questionOrder = ['compensatory', 'punitive'];
 const ATTENTION_QUESTION = 'Twenty-one is an even number.';
 function questionFor(c, type) {
   return QUESTIONS[type].replace('{plaintiff}', c.plaintiff).replace('{company}', c.company);
@@ -131,7 +130,7 @@ function questionFor(c, type) {
 const CHECKS={punitive_check:{question:'Are punitive damages intended to punish the company being sued and discourage similar conduct?',correct:'yes'},compensatory_check:{question:'Are compensatory damages intended to compensate for harm and losses?',correct:'yes'}};
 function caseStages() { return ['read', ...questionOrder]; }
 const STAGE_LABELS={read:'Read case',compensatory:'Compensatory rating',punitive:'Punitive rating'};
-const VERSION='magna-offline-review-2026-11-11-v7';
+const VERSION='magna-offline-review-2026-11-11-v8';
 const SOURCE='https://docs.google.com/document/d/1oLGjqQyQle6a6qhMKSGFK2zdYTmyyLth1tSM5gDxU7A/edit';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -415,7 +414,7 @@ $('next-case').onclick=()=>{const c=current().case;declined=false;inspectIndex=(
 $('screen').onchange=()=>{declined=false;mode='session';screenIndex=Number($('screen').value);render()};
 $('previous-screen').onclick=()=>moveScreen(-1);$('next-screen').onclick=()=>moveScreen(1);
 $('start-session').onclick=()=>{declined=false;mode='session';screenIndex=0;render()};
-$('new-session').onclick=()=>{assignmentNumber=randomInt(assignmentCount)+1;assignment=shuffle(assignmentFor(assignmentNumber));questionOrder=QUESTION_ORDERS[randomInt(QUESTION_ORDERS.length)].slice();sessionId=makeId();consented=false;demographicValues=null;feedbackValue='';finished=false;declined=false;checkAnswers={};checkAttempt=0;checksPassed=false;showCheckReminder=false;mode='session';screenIndex=0;render()};
+$('new-session').onclick=()=>{assignmentNumber=randomInt(assignmentCount)+1;assignment=shuffle(assignmentFor(assignmentNumber));sessionId=makeId();consented=false;demographicValues=null;feedbackValue='';finished=false;declined=false;checkAnswers={};checkAttempt=0;checksPassed=false;showCheckReminder=false;mode='session';screenIndex=0;render()};
 $('download-json').onclick=()=>download('json');$('download-csv').onclick=()=>download('csv');
 globalThis.magnaReview={bank:BANK,assignmentFor,exportData:payload,get assignment(){return assignment},get current(){return current()},get mode(){return mode},get assignmentNumber(){return assignmentNumber},get questionOrder(){return questionOrder.slice()}};
 render();
