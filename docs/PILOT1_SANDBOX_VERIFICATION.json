@@ -1,0 +1,32 @@
+{
+  "result": "passed",
+  "study_id": "MAGNA-PILOT-1-KK2W",
+  "experiment_version": "magna-pilot1-1.0.1",
+  "package_fingerprint": "559d363012cfeccb13c4d40f8e528501f482da013ea5fc1a0257576bc5df5109",
+  "planned_participants": 320,
+  "groups": 16,
+  "target_per_group": 20,
+  "vignette_evaluations_at_target": 20,
+  "context_evaluations_at_target": 240,
+  "category_evaluations_at_target": 240,
+  "outcome_evaluations_at_target": 320,
+  "sandbox_submissions": 16,
+  "raw_trials": 258,
+  "rating_rows": 96,
+  "responses_csv_rows": 242,
+  "demographics_csv_rows": 16,
+  "vignettes_verified": 48,
+  "condition_checks": "all matched",
+  "compensatory_first": true,
+  "reading_and_page_times": "all exported",
+  "p01_reload_and_comprehension_retry": "responses retained once",
+  "p02_attention_failure": "response retained and completion allowed",
+  "p03_optional_demographics": "all blank saved successfully",
+  "bundle_sha256": "65b725b45611fa06d82aa12aeeef76859f7b6894168550905e4610311bbc53d1",
+  "verified_date": "2026-11-11",
+  "data_format_confirmed": true,
+  "remaining_preflight_actions": [
+    "Add the real Prolific completion URL",
+    "Confirm the Prolific launch link, 320 places, and matching completion code"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "url": "https://explanation-lab.github.io/magna_projects/pilot-1-v1-0-1/",
+  "all_runtime_files_match": true,
+  "files": {
+    "css/study.css": "d2d919bc1f646ff246bfa905504473aa5cb5f896c30443e2baedd712ce1f9bfd",
+    "index.html": "90e1eef612130f15db9c80e39a1bcfaf93e8a3b392f301511010ff7ce4e99dd9",
+    "js/collection.js": "0956ebc9702099a8eab000840734c482b361032454e1ade97408cc947292db4d",
+    "js/materials.js": "ed744eac4f788dc2b62ccd6c32de77b528403e52d543159dc86cde170a16adca",
+    "js/study.js": "f152cdd8a8d818641b34b1cd128e2a7502ef1d49c9a9d7f35537915b2310a9b9",
+    "js/ui.js": "8cdc1cb3456bbaf9e926fa28e99167bef1af9e9008b74204106d8b6489823693",
+    "vendor/THIRD_PARTY_NOTICES.md": "ee2f7e7e56943cc898d6a082b1c10bdb0ea30573d07670325e5feee350773edf",
+    "vendor/jspsych-7.3.4.css": "fa82c872674d17a559d9a8930b4ad23dfaa51bbc8f51c3261c119b2eb164ec09",
+    "vendor/jspsych-7.3.4.js": "2b5a14d24b4d34eae6fcdfa13fe5f16df4ec05751c1f69b6e88e063270fff664",
+    "vendor/plugin-html-button-response-1.1.3.js": "68c27ad4356e51f6ec0e2c50796271fff313f93268bb9406011d738a9a7c44b2",
+    "explanation-lab-client.js": "a60a3538dc60f89b37c4672d31e9c874c1ff854a84956482627ae57647de0d03",
+    "explanation-lab.config.json": "22f35d120e49d1dd891b0bf8f4b905a25da61b787e90b2d2e2f196a74e7abbd6"
+  },
+  "verified_date": "2026-11-11",
+  "experiment_version": "magna-pilot1-1.0.1",
+  "study_id": "MAGNA-PILOT-1-KK2W",
+  "package_fingerprint": "559d363012cfeccb13c4d40f8e528501f482da013ea5fc1a0257576bc5df5109",
+  "deployment_branch": "gh-pages",
+  "deployment_commit": "625f80a2f2daeae9d7e1324ec8c62c5ab982972f"
+}

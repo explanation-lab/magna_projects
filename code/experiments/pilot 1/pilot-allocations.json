@@ -1,14 +1,160 @@
 {
-  "completed_participant_target": 160,
+  "completed_participant_target": 320,
   "cases_per_participant": 3,
-  "evaluations_per_vignette": 10,
+  "evaluations_per_vignette": 20,
+  "groups": [
+    {
+      "code": "p01",
+      "target": 20,
+      "case_ids": [
+        "B-N1",
+        "L-S2",
+        "T-C3"
+      ]
+    },
+    {
+      "code": "p02",
+      "target": 20,
+      "case_ids": [
+        "B-I1",
+        "L-C2",
+        "T-S3"
+      ]
+    },
+    {
+      "code": "p03",
+      "target": 20,
+      "case_ids": [
+        "B-C1",
+        "L-I2",
+        "T-N3"
+      ]
+    },
+    {
+      "code": "p04",
+      "target": 20,
+      "case_ids": [
+        "B-S1",
+        "L-N2",
+        "T-I3"
+      ]
+    },
+    {
+      "code": "p05",
+      "target": 20,
+      "case_ids": [
+        "N1",
+        "L-C3",
+        "T-S2"
+      ]
+    },
+    {
+      "code": "p06",
+      "target": 20,
+      "case_ids": [
+        "I1",
+        "L-S3",
+        "T-C2"
+      ]
+    },
+    {
+      "code": "p07",
+      "target": 20,
+      "case_ids": [
+        "C1",
+        "L-N3",
+        "T-I2"
+      ]
+    },
+    {
+      "code": "p08",
+      "target": 20,
+      "case_ids": [
+        "S1",
+        "L-I3",
+        "T-N2"
+      ]
+    },
+    {
+      "code": "p09",
+      "target": 20,
+      "case_ids": [
+        "S2",
+        "B-C3",
+        "T-N1"
+      ]
+    },
+    {
+      "code": "p10",
+      "target": 20,
+      "case_ids": [
+        "C2",
+        "B-S3",
+        "T-I1"
+      ]
+    },
+    {
+      "code": "p11",
+      "target": 20,
+      "case_ids": [
+        "I2",
+        "B-N3",
+        "T-C1"
+      ]
+    },
+    {
+      "code": "p12",
+      "target": 20,
+      "case_ids": [
+        "N2",
+        "B-I3",
+        "T-S1"
+      ]
+    },
+    {
+      "code": "p13",
+      "target": 20,
+      "case_ids": [
+        "C3",
+        "B-S2",
+        "L-N1"
+      ]
+    },
+    {
+      "code": "p14",
+      "target": 20,
+      "case_ids": [
+        "S3",
+        "B-C2",
+        "L-I1"
+      ]
+    },
+    {
+      "code": "p15",
+      "target": 20,
+      "case_ids": [
+        "N3",
+        "B-I2",
+        "L-C1"
+      ]
+    },
+    {
+      "code": "p16",
+      "target": 20,
+      "case_ids": [
+        "I3",
+        "B-N2",
+        "L-S1"
+      ]
+    }
+  ],
   "sessions": [
     {
-      "assignment_pattern": 574,
+      "condition": "p16",
       "case_ids": [
-        "B-S3",
-        "L-N1",
-        "C2"
+        "L-S1",
+        "I3",
+        "B-N2"
       ],
       "question_order": [
         "compensatory",
@@ -17,11 +163,11 @@
       "slot": 1
     },
     {
-      "assignment_pattern": 139,
+      "condition": "p02",
       "case_ids": [
-        "T-N3",
-        "B-C1",
-        "L-S2"
+        "L-C2",
+        "T-S3",
+        "B-I1"
       ],
       "question_order": [
         "compensatory",
@@ -30,11 +176,11 @@
       "slot": 2
     },
     {
-      "assignment_pattern": 483,
+      "condition": "p06",
       "case_ids": [
-        "B-S1",
-        "N2",
-        "L-I3"
+        "T-C2",
+        "L-S3",
+        "I1"
       ],
       "question_order": [
         "compensatory",
@@ -43,11 +189,11 @@
       "slot": 3
     },
     {
-      "assignment_pattern": 313,
+      "condition": "p03",
       "case_ids": [
-        "B-C2",
+        "L-I2",
         "T-N3",
-        "I1"
+        "B-C1"
       ],
       "question_order": [
         "compensatory",
@@ -56,11 +202,11 @@
       "slot": 4
     },
     {
-      "assignment_pattern": 6,
+      "condition": "p04",
       "case_ids": [
-        "L-N2",
-        "B-I3",
-        "T-S1"
+        "B-S1",
+        "T-I3",
+        "L-N2"
       ],
       "question_order": [
         "compensatory",
@@ -69,11 +215,11 @@
       "slot": 5
     },
     {
-      "assignment_pattern": 513,
+      "condition": "p16",
       "case_ids": [
-        "S2",
-        "L-C3",
-        "B-I1"
+        "L-S1",
+        "B-N2",
+        "I3"
       ],
       "question_order": [
         "compensatory",
@@ -82,11 +228,11 @@
       "slot": 6
     },
     {
-      "assignment_pattern": 481,
+      "condition": "p06",
       "case_ids": [
-        "B-S2",
-        "N1",
-        "L-I3"
+        "I1",
+        "L-S3",
+        "T-C2"
       ],
       "question_order": [
         "compensatory",
@@ -95,11 +241,11 @@
       "slot": 7
     },
     {
-      "assignment_pattern": 161,
+      "condition": "p04",
       "case_ids": [
-        "T-N2",
-        "L-S1",
-        "I3"
+        "B-S1",
+        "T-I3",
+        "L-N2"
       ],
       "question_order": [
         "compensatory",
@@ -108,11 +254,11 @@
       "slot": 8
     },
     {
-      "assignment_pattern": 448,
+      "condition": "p01",
       "case_ids": [
-        "L-N1",
-        "B-S3",
-        "I2"
+        "T-C3",
+        "B-N1",
+        "L-S2"
       ],
       "question_order": [
         "compensatory",
@@ -121,852 +267,7 @@
       "slot": 9
     },
     {
-      "assignment_pattern": 523,
-      "case_ids": [
-        "L-C3",
-        "B-N2",
-        "S1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 10
-    },
-    {
-      "assignment_pattern": 211,
-      "case_ids": [
-        "N1",
-        "T-S3",
-        "L-C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 11
-    },
-    {
-      "assignment_pattern": 50,
-      "case_ids": [
-        "T-I2",
-        "B-N1",
-        "L-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 12
-    },
-    {
-      "assignment_pattern": 345,
-      "case_ids": [
-        "B-S1",
-        "N2",
-        "T-C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 13
-    },
-    {
-      "assignment_pattern": 414,
-      "case_ids": [
-        "T-I1",
-        "B-N2",
-        "C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 14
-    },
-    {
-      "assignment_pattern": 478,
-      "case_ids": [
-        "B-I3",
-        "N2",
-        "L-C1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 15
-    },
-    {
-      "assignment_pattern": 275,
-      "case_ids": [
-        "L-N1",
-        "C3",
-        "T-S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 16
-    },
-    {
-      "assignment_pattern": 337,
-      "case_ids": [
-        "T-I3",
-        "B-S2",
-        "N1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 17
-    },
-    {
-      "assignment_pattern": 265,
-      "case_ids": [
-        "T-I3",
-        "L-N2",
-        "C1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 18
-    },
-    {
-      "assignment_pattern": 277,
-      "case_ids": [
-        "C1",
-        "T-I3",
-        "L-S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 19
-    },
-    {
-      "assignment_pattern": 215,
-      "case_ids": [
-        "T-S2",
-        "L-C1",
-        "N3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 20
-    },
-    {
-      "assignment_pattern": 541,
-      "case_ids": [
-        "L-N3",
-        "C1",
-        "B-I2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 21
-    },
-    {
-      "assignment_pattern": 227,
-      "case_ids": [
-        "L-I1",
-        "S3",
-        "T-C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 22
-    },
-    {
-      "assignment_pattern": 406,
-      "case_ids": [
-        "B-I3",
-        "C2",
-        "T-S1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 23
-    },
-    {
-      "assignment_pattern": 399,
-      "case_ids": [
-        "B-I1",
-        "T-N3",
-        "C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 24
-    },
-    {
-      "assignment_pattern": 382,
-      "case_ids": [
-        "B-N3",
-        "S2",
-        "T-C1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 25
-    },
-    {
-      "assignment_pattern": 210,
-      "case_ids": [
-        "N3",
-        "L-C2",
-        "T-I1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 26
-    },
-    {
-      "assignment_pattern": 447,
-      "case_ids": [
-        "I2",
-        "L-N3",
-        "B-S1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 27
-    },
-    {
-      "assignment_pattern": 571,
-      "case_ids": [
-        "C1",
-        "L-N3",
-        "B-S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 28
-    },
-    {
-      "assignment_pattern": 162,
-      "case_ids": [
-        "L-S2",
-        "T-N1",
-        "I3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 29
-    },
-    {
-      "assignment_pattern": 48,
-      "case_ids": [
-        "B-N3",
-        "L-I2",
-        "T-C1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 30
-    },
-    {
-      "assignment_pattern": 424,
-      "case_ids": [
-        "T-I1",
-        "C2",
-        "B-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 31
-    },
-    {
-      "assignment_pattern": 465,
-      "case_ids": [
-        "I2",
-        "L-S3",
-        "B-C1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 32
-    },
-    {
-      "assignment_pattern": 549,
-      "case_ids": [
-        "L-S3",
-        "B-I1",
-        "C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 33
-    },
-    {
-      "assignment_pattern": 355,
-      "case_ids": [
-        "B-C2",
-        "N1",
-        "T-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 34
-    },
-    {
-      "assignment_pattern": 186,
-      "case_ids": [
-        "N3",
-        "L-I2",
-        "T-S1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 35
-    },
-    {
-      "assignment_pattern": 438,
-      "case_ids": [
-        "B-N2",
-        "L-S1",
-        "I3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 36
-    },
-    {
-      "assignment_pattern": 65,
-      "case_ids": [
-        "L-C1",
-        "T-I2",
-        "B-N3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 37
-    },
-    {
-      "assignment_pattern": 307,
-      "case_ids": [
-        "T-C3",
-        "I1",
-        "B-S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 38
-    },
-    {
-      "assignment_pattern": 191,
-      "case_ids": [
-        "N3",
-        "L-I1",
-        "T-C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 39
-    },
-    {
-      "assignment_pattern": 55,
-      "case_ids": [
-        "L-S2",
-        "T-C3",
-        "B-N1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 40
-    },
-    {
-      "assignment_pattern": 26,
-      "case_ids": [
-        "T-N2",
-        "B-I1",
-        "L-C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 41
-    },
-    {
-      "assignment_pattern": 457,
-      "case_ids": [
-        "L-N3",
-        "I1",
-        "B-C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 42
-    },
-    {
-      "assignment_pattern": 519,
-      "case_ids": [
-        "B-N1",
-        "S2",
-        "L-I3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 43
-    },
-    {
-      "assignment_pattern": 375,
-      "case_ids": [
-        "S2",
-        "B-N1",
-        "T-I3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 44
-    },
-    {
-      "assignment_pattern": 217,
-      "case_ids": [
-        "L-I2",
-        "S1",
-        "T-N3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 45
-    },
-    {
-      "assignment_pattern": 480,
-      "case_ids": [
-        "N3",
-        "L-C1",
-        "B-I2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 46
-    },
-    {
-      "assignment_pattern": 403,
-      "case_ids": [
-        "B-I2",
-        "C1",
-        "T-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 47
-    },
-    {
-      "assignment_pattern": 475,
-      "case_ids": [
-        "B-I2",
-        "L-C3",
-        "N1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 48
-    },
-    {
-      "assignment_pattern": 252,
-      "case_ids": [
-        "T-N1",
-        "L-C2",
-        "S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 49
-    },
-    {
-      "assignment_pattern": 433,
-      "case_ids": [
-        "L-S3",
-        "I1",
-        "B-N2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 50
-    },
-    {
-      "assignment_pattern": 339,
-      "case_ids": [
-        "T-I3",
-        "B-S1",
-        "N2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 51
-    },
-    {
-      "assignment_pattern": 18,
-      "case_ids": [
-        "B-I3",
-        "L-S2",
-        "T-N1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 52
-    },
-    {
-      "assignment_pattern": 109,
-      "case_ids": [
-        "L-I2",
-        "B-C1",
-        "T-N3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 53
-    },
-    {
-      "assignment_pattern": 576,
-      "case_ids": [
-        "L-N1",
-        "C3",
-        "B-S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 54
-    },
-    {
-      "assignment_pattern": 487,
-      "case_ids": [
-        "L-C3",
-        "N1",
-        "B-S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 55
-    },
-    {
-      "assignment_pattern": 525,
-      "case_ids": [
-        "B-N1",
-        "S2",
-        "L-C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 56
-    },
-    {
-      "assignment_pattern": 361,
-      "case_ids": [
-        "T-N3",
-        "B-I2",
-        "S1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 57
-    },
-    {
-      "assignment_pattern": 224,
-      "case_ids": [
-        "S1",
-        "T-C2",
-        "L-I3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 58
-    },
-    {
-      "assignment_pattern": 5,
-      "case_ids": [
-        "T-S2",
-        "L-N1",
-        "B-I3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 59
-    },
-    {
-      "assignment_pattern": 246,
-      "case_ids": [
-        "S3",
-        "T-I1",
-        "L-C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 60
-    },
-    {
-      "assignment_pattern": 463,
-      "case_ids": [
-        "I1",
-        "B-C2",
-        "L-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 61
-    },
-    {
-      "assignment_pattern": 319,
-      "case_ids": [
-        "B-C2",
-        "I1",
-        "T-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 62
-    },
-    {
-      "assignment_pattern": 489,
-      "case_ids": [
-        "N2",
-        "B-S1",
-        "L-C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 63
-    },
-    {
-      "assignment_pattern": 110,
-      "case_ids": [
-        "L-I3",
-        "B-C1",
-        "T-N2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 64
-    },
-    {
-      "assignment_pattern": 468,
-      "case_ids": [
-        "L-S1",
-        "I3",
-        "B-C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 65
-    },
-    {
-      "assignment_pattern": 95,
-      "case_ids": [
-        "B-S3",
-        "T-C2",
-        "L-N1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 66
-    },
-    {
-      "assignment_pattern": 327,
-      "case_ids": [
-        "B-I1",
-        "N2",
-        "T-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 67
-    },
-    {
-      "assignment_pattern": 547,
-      "case_ids": [
-        "C1",
-        "B-I2",
-        "L-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 68
-    },
-    {
-      "assignment_pattern": 83,
-      "case_ids": [
-        "L-I1",
-        "B-S3",
-        "T-C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 69
-    },
-    {
-      "assignment_pattern": 102,
-      "case_ids": [
-        "L-C2",
-        "T-I1",
-        "B-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 70
-    },
-    {
-      "assignment_pattern": 163,
-      "case_ids": [
-        "I1",
-        "L-S2",
-        "T-C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 71
-    },
-    {
-      "assignment_pattern": 86,
-      "case_ids": [
-        "T-I2",
-        "L-N3",
-        "B-S1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 72
-    },
-    {
-      "assignment_pattern": 90,
-      "case_ids": [
-        "L-N2",
-        "T-I1",
-        "B-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 73
-    },
-    {
-      "assignment_pattern": 562,
-      "case_ids": [
-        "C2",
-        "L-S1",
-        "B-N3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 74
-    },
-    {
-      "assignment_pattern": 328,
+      "condition": "p12",
       "case_ids": [
         "N2",
         "T-S1",
@@ -976,14 +277,859 @@
         "compensatory",
         "punitive"
       ],
+      "slot": 10
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "T-S1",
+        "B-I3",
+        "N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 11
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "T-N3",
+        "B-C1",
+        "L-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 12
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "T-C2",
+        "I1",
+        "L-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 13
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "B-N2",
+        "L-S1",
+        "I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 14
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "B-C3",
+        "S2",
+        "T-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 15
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "T-I1",
+        "B-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 16
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "T-I1",
+        "B-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 17
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "T-S1",
+        "N2",
+        "B-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 18
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "L-C2",
+        "T-S3",
+        "B-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 19
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "T-C3",
+        "L-S2",
+        "B-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 20
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "L-S1",
+        "B-N2",
+        "I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 21
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "N3",
+        "B-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 22
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "L-S3",
+        "I1",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 23
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "S3",
+        "B-C2",
+        "L-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 24
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "T-C3",
+        "L-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 25
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "S2",
+        "T-N1",
+        "B-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 26
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "B-N3",
+        "I2",
+        "T-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 27
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "S2",
+        "B-C3",
+        "T-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 28
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "B-S3",
+        "T-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 29
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "N3",
+        "L-C1",
+        "B-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 30
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "T-N2",
+        "L-I3",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 31
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "T-S1",
+        "N2",
+        "B-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 32
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "T-N3",
+        "B-C1",
+        "L-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 33
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "L-N2",
+        "B-S1",
+        "T-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 34
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "T-I1",
+        "B-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 35
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "T-N3",
+        "L-I2",
+        "B-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 36
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "L-I1",
+        "S3",
+        "B-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 37
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "T-I2",
+        "C1",
+        "L-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 38
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "T-I2",
+        "C1",
+        "L-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 39
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "B-I1",
+        "L-C2",
+        "T-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 40
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "B-I1",
+        "L-C2",
+        "T-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 41
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "L-I1",
+        "B-C2",
+        "S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 42
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "T-N3",
+        "L-I2",
+        "B-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 43
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "I3",
+        "B-N2",
+        "L-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 44
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "B-I2",
+        "N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 45
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "T-S2",
+        "N1",
+        "L-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 46
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "L-N3",
+        "T-I2",
+        "C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 47
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "T-I3",
+        "B-S1",
+        "L-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 48
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "L-S3",
+        "I1",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 49
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "L-N1",
+        "B-S2",
+        "C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 50
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "L-N3",
+        "T-I2",
+        "C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 51
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "L-N1",
+        "C3",
+        "B-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 52
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "L-C3",
+        "T-S2",
+        "N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 53
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "I1",
+        "L-S3",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 54
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "B-N3",
+        "I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 55
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "L-N1",
+        "B-S2",
+        "C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 56
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "L-C2",
+        "B-I1",
+        "T-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 57
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "I3",
+        "B-N2",
+        "L-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 58
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "B-I3",
+        "N2",
+        "T-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 59
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "L-S1",
+        "B-N2",
+        "I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 60
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "T-I3",
+        "B-S1",
+        "L-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 61
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "L-S2",
+        "T-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 62
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "I2",
+        "B-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 63
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "B-N2",
+        "L-S1",
+        "I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 64
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "T-I1",
+        "B-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 65
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "T-I1",
+        "B-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 66
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "N1",
+        "L-C3",
+        "T-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 67
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "N3",
+        "B-I2",
+        "L-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 68
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "L-N2",
+        "B-S1",
+        "T-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 69
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "N1",
+        "L-C3",
+        "T-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 70
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "L-I1",
+        "S3",
+        "B-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 71
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "I2",
+        "B-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 72
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "C3",
+        "B-S2",
+        "L-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 73
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "S3",
+        "B-C2",
+        "L-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 74
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "N1",
+        "L-C3",
+        "T-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
       "slot": 75
     },
     {
-      "assignment_pattern": 149,
+      "condition": "p01",
       "case_ids": [
-        "I3",
-        "L-N1",
-        "T-S2"
+        "B-N1",
+        "T-C3",
+        "L-S2"
       ],
       "question_order": [
         "compensatory",
@@ -992,11 +1138,11 @@
       "slot": 76
     },
     {
-      "assignment_pattern": 167,
+      "condition": "p03",
       "case_ids": [
-        "L-S1",
-        "T-C2",
-        "I3"
+        "B-C1",
+        "T-N3",
+        "L-I2"
       ],
       "question_order": [
         "compensatory",
@@ -1005,11 +1151,11 @@
       "slot": 77
     },
     {
-      "assignment_pattern": 373,
+      "condition": "p10",
       "case_ids": [
-        "S1",
-        "B-N2",
-        "T-I3"
+        "T-I1",
+        "C2",
+        "B-S3"
       ],
       "question_order": [
         "compensatory",
@@ -1018,11 +1164,11 @@
       "slot": 78
     },
     {
-      "assignment_pattern": 366,
+      "condition": "p03",
       "case_ids": [
-        "B-I2",
-        "S3",
-        "T-N1"
+        "B-C1",
+        "L-I2",
+        "T-N3"
       ],
       "question_order": [
         "compensatory",
@@ -1031,9 +1177,9 @@
       "slot": 79
     },
     {
-      "assignment_pattern": 206,
+      "condition": "p05",
       "case_ids": [
-        "T-I2",
+        "T-S2",
         "N1",
         "L-C3"
       ],
@@ -1044,10 +1190,10 @@
       "slot": 80
     },
     {
-      "assignment_pattern": 66,
+      "condition": "p10",
       "case_ids": [
-        "L-C2",
-        "B-N3",
+        "B-S3",
+        "C2",
         "T-I1"
       ],
       "question_order": [
@@ -1057,11 +1203,11 @@
       "slot": 81
     },
     {
-      "assignment_pattern": 47,
+      "condition": "p10",
       "case_ids": [
-        "B-N3",
-        "T-C2",
-        "L-I1"
+        "B-S3",
+        "T-I1",
+        "C2"
       ],
       "question_order": [
         "compensatory",
@@ -1070,11 +1216,11 @@
       "slot": 82
     },
     {
-      "assignment_pattern": 60,
+      "condition": "p05",
       "case_ids": [
-        "L-S2",
-        "T-C1",
-        "B-N3"
+        "L-C3",
+        "T-S2",
+        "N1"
       ],
       "question_order": [
         "compensatory",
@@ -1083,11 +1229,11 @@
       "slot": 83
     },
     {
-      "assignment_pattern": 297,
+      "condition": "p09",
       "case_ids": [
-        "I2",
-        "T-C3",
-        "B-N1"
+        "B-C3",
+        "T-N1",
+        "S2"
       ],
       "question_order": [
         "compensatory",
@@ -1096,46 +1242,7 @@
       "slot": 84
     },
     {
-      "assignment_pattern": 532,
-      "case_ids": [
-        "L-I1",
-        "B-C3",
-        "S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 85
-    },
-    {
-      "assignment_pattern": 423,
-      "case_ids": [
-        "T-I3",
-        "B-S1",
-        "C2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 86
-    },
-    {
-      "assignment_pattern": 534,
-      "case_ids": [
-        "B-C2",
-        "S3",
-        "L-I1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 87
-    },
-    {
-      "assignment_pattern": 218,
+      "condition": "p08",
       "case_ids": [
         "S1",
         "T-N2",
@@ -1145,14 +1252,53 @@
         "compensatory",
         "punitive"
       ],
+      "slot": 85
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "T-S3",
+        "L-C2",
+        "B-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 86
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "B-S3",
+        "T-I1",
+        "C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 87
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "T-S3",
+        "B-I1",
+        "L-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
       "slot": 88
     },
     {
-      "assignment_pattern": 300,
+      "condition": "p06",
       "case_ids": [
-        "B-N2",
-        "I3",
-        "T-C1"
+        "I1",
+        "T-C2",
+        "L-S3"
       ],
       "question_order": [
         "compensatory",
@@ -1161,11 +1307,11 @@
       "slot": 89
     },
     {
-      "assignment_pattern": 492,
+      "condition": "p15",
       "case_ids": [
+        "B-I2",
         "L-C1",
-        "N3",
-        "B-S2"
+        "N3"
       ],
       "question_order": [
         "compensatory",
@@ -1174,11 +1320,11 @@
       "slot": 90
     },
     {
-      "assignment_pattern": 288,
+      "condition": "p12",
       "case_ids": [
-        "C3",
-        "T-N1",
-        "L-S2"
+        "T-S1",
+        "B-I3",
+        "N2"
       ],
       "question_order": [
         "compensatory",
@@ -1187,11 +1333,11 @@
       "slot": 91
     },
     {
-      "assignment_pattern": 36,
+      "condition": "p04",
       "case_ids": [
-        "B-I3",
-        "L-C2",
-        "T-S1"
+        "B-S1",
+        "L-N2",
+        "T-I3"
       ],
       "question_order": [
         "compensatory",
@@ -1200,11 +1346,11 @@
       "slot": 92
     },
     {
-      "assignment_pattern": 101,
+      "condition": "p07",
       "case_ids": [
         "T-I2",
-        "L-C1",
-        "B-S3"
+        "L-N3",
+        "C1"
       ],
       "question_order": [
         "compensatory",
@@ -1213,11 +1359,11 @@
       "slot": 93
     },
     {
-      "assignment_pattern": 43,
+      "condition": "p14",
       "case_ids": [
-        "L-I2",
-        "B-N1",
-        "T-C3"
+        "B-C2",
+        "L-I1",
+        "S3"
       ],
       "question_order": [
         "compensatory",
@@ -1226,11 +1372,11 @@
       "slot": 94
     },
     {
-      "assignment_pattern": 192,
+      "condition": "p13",
       "case_ids": [
-        "L-I2",
-        "T-C1",
-        "N3"
+        "B-S2",
+        "L-N1",
+        "C3"
       ],
       "question_order": [
         "compensatory",
@@ -1239,11 +1385,11 @@
       "slot": 95
     },
     {
-      "assignment_pattern": 269,
+      "condition": "p13",
       "case_ids": [
-        "L-N1",
         "C3",
-        "T-I2"
+        "L-N1",
+        "B-S2"
       ],
       "question_order": [
         "compensatory",
@@ -1252,11 +1398,11 @@
       "slot": 96
     },
     {
-      "assignment_pattern": 529,
+      "condition": "p09",
       "case_ids": [
-        "S1",
-        "B-C2",
-        "L-I3"
+        "T-N1",
+        "S2",
+        "B-C3"
       ],
       "question_order": [
         "compensatory",
@@ -1265,11 +1411,11 @@
       "slot": 97
     },
     {
-      "assignment_pattern": 330,
+      "condition": "p12",
       "case_ids": [
         "T-S1",
-        "N3",
-        "B-I2"
+        "B-I3",
+        "N2"
       ],
       "question_order": [
         "compensatory",
@@ -1278,11 +1424,11 @@
       "slot": 98
     },
     {
-      "assignment_pattern": 360,
+      "condition": "p13",
       "case_ids": [
-        "B-C2",
-        "T-S1",
-        "N3"
+        "C3",
+        "L-N1",
+        "B-S2"
       ],
       "question_order": [
         "compensatory",
@@ -1291,11 +1437,11 @@
       "slot": 99
     },
     {
-      "assignment_pattern": 84,
+      "condition": "p05",
       "case_ids": [
-        "T-C1",
-        "L-I2",
-        "B-S3"
+        "N1",
+        "L-C3",
+        "T-S2"
       ],
       "question_order": [
         "compensatory",
@@ -1304,11 +1450,11 @@
       "slot": 100
     },
     {
-      "assignment_pattern": 514,
+      "condition": "p11",
       "case_ids": [
-        "B-I3",
-        "L-C1",
-        "S2"
+        "I2",
+        "T-C1",
+        "B-N3"
       ],
       "question_order": [
         "compensatory",
@@ -1317,11 +1463,11 @@
       "slot": 101
     },
     {
-      "assignment_pattern": 315,
+      "condition": "p13",
       "case_ids": [
-        "I2",
-        "B-C1",
-        "T-N3"
+        "B-S2",
+        "L-N1",
+        "C3"
       ],
       "question_order": [
         "compensatory",
@@ -1330,11 +1476,11 @@
       "slot": 102
     },
     {
-      "assignment_pattern": 405,
+      "condition": "p04",
       "case_ids": [
-        "C2",
-        "B-I1",
-        "T-S3"
+        "L-N2",
+        "T-I3",
+        "B-S1"
       ],
       "question_order": [
         "compensatory",
@@ -1343,11 +1489,11 @@
       "slot": 103
     },
     {
-      "assignment_pattern": 97,
+      "condition": "p01",
       "case_ids": [
-        "B-S1",
-        "L-C2",
-        "T-I3"
+        "T-C3",
+        "L-S2",
+        "B-N1"
       ],
       "question_order": [
         "compensatory",
@@ -1356,10 +1502,10 @@
       "slot": 104
     },
     {
-      "assignment_pattern": 150,
+      "condition": "p16",
       "case_ids": [
-        "T-S1",
-        "L-N2",
+        "L-S1",
+        "B-N2",
         "I3"
       ],
       "question_order": [
@@ -1369,11 +1515,11 @@
       "slot": 105
     },
     {
-      "assignment_pattern": 132,
+      "condition": "p07",
       "case_ids": [
-        "L-N2",
-        "B-C3",
-        "T-S1"
+        "C1",
+        "L-N3",
+        "T-I2"
       ],
       "question_order": [
         "compensatory",
@@ -1382,11 +1528,11 @@
       "slot": 106
     },
     {
-      "assignment_pattern": 209,
+      "condition": "p08",
       "case_ids": [
-        "L-C1",
-        "N3",
-        "T-I2"
+        "T-N2",
+        "S1",
+        "L-I3"
       ],
       "question_order": [
         "compensatory",
@@ -1395,11 +1541,11 @@
       "slot": 107
     },
     {
-      "assignment_pattern": 321,
+      "condition": "p14",
       "case_ids": [
-        "I2",
-        "T-S3",
-        "B-C1"
+        "B-C2",
+        "L-I1",
+        "S3"
       ],
       "question_order": [
         "compensatory",
@@ -1408,11 +1554,11 @@
       "slot": 108
     },
     {
-      "assignment_pattern": 116,
+      "condition": "p14",
       "case_ids": [
-        "L-I3",
-        "B-C1",
-        "T-S2"
+        "S3",
+        "L-I1",
+        "B-C2"
       ],
       "question_order": [
         "compensatory",
@@ -1421,11 +1567,11 @@
       "slot": 109
     },
     {
-      "assignment_pattern": 459,
+      "condition": "p12",
       "case_ids": [
-        "L-N3",
-        "B-C1",
-        "I2"
+        "T-S1",
+        "N2",
+        "B-I3"
       ],
       "question_order": [
         "compensatory",
@@ -1434,11 +1580,11 @@
       "slot": 110
     },
     {
-      "assignment_pattern": 29,
+      "condition": "p10",
       "case_ids": [
-        "L-C1",
-        "B-I3",
-        "T-N2"
+        "C2",
+        "T-I1",
+        "B-S3"
       ],
       "question_order": [
         "compensatory",
@@ -1447,11 +1593,11 @@
       "slot": 111
     },
     {
-      "assignment_pattern": 397,
+      "condition": "p04",
       "case_ids": [
-        "C1",
-        "B-I2",
-        "T-N3"
+        "L-N2",
+        "B-S1",
+        "T-I3"
       ],
       "question_order": [
         "compensatory",
@@ -1460,11 +1606,11 @@
       "slot": 112
     },
     {
-      "assignment_pattern": 156,
+      "condition": "p05",
       "case_ids": [
-        "I3",
-        "T-C1",
-        "L-N2"
+        "N1",
+        "L-C3",
+        "T-S2"
       ],
       "question_order": [
         "compensatory",
@@ -1473,7 +1619,7 @@
       "slot": 113
     },
     {
-      "assignment_pattern": 164,
+      "condition": "p06",
       "case_ids": [
         "L-S3",
         "T-C2",
@@ -1486,11 +1632,11 @@
       "slot": 114
     },
     {
-      "assignment_pattern": 343,
+      "condition": "p12",
       "case_ids": [
-        "N1",
-        "T-C3",
-        "B-S2"
+        "B-I3",
+        "N2",
+        "T-S1"
       ],
       "question_order": [
         "compensatory",
@@ -1499,189 +1645,7 @@
       "slot": 115
     },
     {
-      "assignment_pattern": 92,
-      "case_ids": [
-        "B-S1",
-        "T-C2",
-        "L-N3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 116
-    },
-    {
-      "assignment_pattern": 272,
-      "case_ids": [
-        "L-N3",
-        "C1",
-        "T-S2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 117
-    },
-    {
-      "assignment_pattern": 144,
-      "case_ids": [
-        "T-N1",
-        "L-S2",
-        "B-C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 118
-    },
-    {
-      "assignment_pattern": 379,
-      "case_ids": [
-        "T-C3",
-        "S1",
-        "B-N2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 119
-    },
-    {
-      "assignment_pattern": 131,
-      "case_ids": [
-        "B-C3",
-        "T-S2",
-        "L-N1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 120
-    },
-    {
-      "assignment_pattern": 17,
-      "case_ids": [
-        "T-N2",
-        "B-I3",
-        "L-S1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 121
-    },
-    {
-      "assignment_pattern": 298,
-      "case_ids": [
-        "T-C1",
-        "I2",
-        "B-N3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 122
-    },
-    {
-      "assignment_pattern": 316,
-      "case_ids": [
-        "I2",
-        "B-C3",
-        "T-N1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 123
-    },
-    {
-      "assignment_pattern": 245,
-      "case_ids": [
-        "T-I2",
-        "S3",
-        "L-C1"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 124
-    },
-    {
-      "assignment_pattern": 436,
-      "case_ids": [
-        "L-S1",
-        "B-N3",
-        "I2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 125
-    },
-    {
-      "assignment_pattern": 282,
-      "case_ids": [
-        "L-S2",
-        "T-I1",
-        "C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 126
-    },
-    {
-      "assignment_pattern": 561,
-      "case_ids": [
-        "B-N1",
-        "C2",
-        "L-S3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 127
-    },
-    {
-      "assignment_pattern": 546,
-      "case_ids": [
-        "C3",
-        "L-N1",
-        "B-I2"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 128
-    },
-    {
-      "assignment_pattern": 212,
-      "case_ids": [
-        "T-S2",
-        "N1",
-        "L-C3"
-      ],
-      "question_order": [
-        "compensatory",
-        "punitive"
-      ],
-      "slot": 129
-    },
-    {
-      "assignment_pattern": 266,
+      "condition": "p07",
       "case_ids": [
         "T-I2",
         "L-N3",
@@ -1691,13 +1655,195 @@
         "compensatory",
         "punitive"
       ],
+      "slot": 116
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "T-S3",
+        "B-I1",
+        "L-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 117
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "L-N2",
+        "T-I3",
+        "B-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 118
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "S1",
+        "T-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 119
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "T-N2",
+        "L-I3",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 120
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "L-I2",
+        "B-C1",
+        "T-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 121
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "B-S2",
+        "C3",
+        "L-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 122
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "B-C3",
+        "T-N1",
+        "S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 123
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "L-S2",
+        "T-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 124
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "L-S3",
+        "I1",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 125
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "L-C3",
+        "N1",
+        "T-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 126
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "N3",
+        "B-I2",
+        "L-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 127
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "S3",
+        "B-C2",
+        "L-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 128
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "T-I1",
+        "B-S3",
+        "C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 129
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "S1",
+        "T-N2",
+        "L-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
       "slot": 130
     },
     {
-      "assignment_pattern": 394,
+      "condition": "p09",
       "case_ids": [
-        "S2",
         "B-C3",
+        "S2",
         "T-N1"
       ],
       "question_order": [
@@ -1707,11 +1853,11 @@
       "slot": 131
     },
     {
-      "assignment_pattern": 495,
+      "condition": "p02",
       "case_ids": [
-        "B-C1",
-        "L-I3",
-        "N2"
+        "L-C2",
+        "T-S3",
+        "B-I1"
       ],
       "question_order": [
         "compensatory",
@@ -1720,11 +1866,11 @@
       "slot": 132
     },
     {
-      "assignment_pattern": 393,
+      "condition": "p07",
       "case_ids": [
-        "S2",
-        "B-C1",
-        "T-N3"
+        "C1",
+        "L-N3",
+        "T-I2"
       ],
       "question_order": [
         "compensatory",
@@ -1733,11 +1879,11 @@
       "slot": 133
     },
     {
-      "assignment_pattern": 522,
+      "condition": "p06",
       "case_ids": [
-        "B-N2",
-        "S3",
-        "L-I1"
+        "T-C2",
+        "I1",
+        "L-S3"
       ],
       "question_order": [
         "compensatory",
@@ -1746,11 +1892,11 @@
       "slot": 134
     },
     {
-      "assignment_pattern": 312,
+      "condition": "p12",
       "case_ids": [
-        "B-S2",
-        "T-C1",
-        "I3"
+        "B-I3",
+        "T-S1",
+        "N2"
       ],
       "question_order": [
         "compensatory",
@@ -1759,11 +1905,11 @@
       "slot": 135
     },
     {
-      "assignment_pattern": 247,
+      "condition": "p12",
       "case_ids": [
-        "S1",
-        "L-C2",
-        "T-N3"
+        "T-S1",
+        "B-I3",
+        "N2"
       ],
       "question_order": [
         "compensatory",
@@ -1772,11 +1918,11 @@
       "slot": 136
     },
     {
-      "assignment_pattern": 1,
+      "condition": "p14",
       "case_ids": [
-        "T-S3",
-        "L-N2",
-        "B-I1"
+        "S3",
+        "L-I1",
+        "B-C2"
       ],
       "question_order": [
         "compensatory",
@@ -1785,11 +1931,11 @@
       "slot": 137
     },
     {
-      "assignment_pattern": 143,
+      "condition": "p08",
       "case_ids": [
-        "T-N2",
-        "B-C3",
-        "L-S1"
+        "S1",
+        "L-I3",
+        "T-N2"
       ],
       "question_order": [
         "compensatory",
@@ -1798,11 +1944,11 @@
       "slot": 138
     },
     {
-      "assignment_pattern": 276,
+      "condition": "p03",
       "case_ids": [
-        "L-N2",
-        "T-S1",
-        "C3"
+        "L-I2",
+        "T-N3",
+        "B-C1"
       ],
       "question_order": [
         "compensatory",
@@ -1811,11 +1957,11 @@
       "slot": 139
     },
     {
-      "assignment_pattern": 119,
+      "condition": "p11",
       "case_ids": [
-        "T-S2",
-        "L-I1",
-        "B-C3"
+        "T-C1",
+        "B-N3",
+        "I2"
       ],
       "question_order": [
         "compensatory",
@@ -1824,11 +1970,11 @@
       "slot": 140
     },
     {
-      "assignment_pattern": 496,
+      "condition": "p08",
       "case_ids": [
-        "N2",
-        "B-C3",
-        "L-I1"
+        "L-I3",
+        "T-N2",
+        "S1"
       ],
       "question_order": [
         "compensatory",
@@ -1837,11 +1983,11 @@
       "slot": 141
     },
     {
-      "assignment_pattern": 517,
+      "condition": "p08",
       "case_ids": [
+        "S1",
         "L-I3",
-        "B-N2",
-        "S1"
+        "T-N2"
       ],
       "question_order": [
         "compensatory",
@@ -1850,11 +1996,11 @@
       "slot": 142
     },
     {
-      "assignment_pattern": 381,
+      "condition": "p15",
       "case_ids": [
-        "T-C3",
-        "S2",
-        "B-N1"
+        "N3",
+        "B-I2",
+        "L-C1"
       ],
       "question_order": [
         "compensatory",
@@ -1863,11 +2009,11 @@
       "slot": 143
     },
     {
-      "assignment_pattern": 340,
+      "condition": "p10",
       "case_ids": [
-        "T-I1",
         "B-S3",
-        "N2"
+        "T-I1",
+        "C2"
       ],
       "question_order": [
         "compensatory",
@@ -1876,11 +2022,11 @@
       "slot": 144
     },
     {
-      "assignment_pattern": 151,
+      "condition": "p03",
       "case_ids": [
-        "L-N2",
-        "T-C3",
-        "I1"
+        "L-I2",
+        "B-C1",
+        "T-N3"
       ],
       "question_order": [
         "compensatory",
@@ -1889,11 +2035,11 @@
       "slot": 145
     },
     {
-      "assignment_pattern": 426,
+      "condition": "p03",
       "case_ids": [
-        "C3",
-        "B-S2",
-        "T-I1"
+        "L-I2",
+        "T-N3",
+        "B-C1"
       ],
       "question_order": [
         "compensatory",
@@ -1902,11 +2048,11 @@
       "slot": 146
     },
     {
-      "assignment_pattern": 228,
+      "condition": "p09",
       "case_ids": [
-        "L-I2",
-        "S3",
-        "T-C1"
+        "T-N1",
+        "B-C3",
+        "S2"
       ],
       "question_order": [
         "compensatory",
@@ -1915,11 +2061,11 @@
       "slot": 147
     },
     {
-      "assignment_pattern": 31,
+      "condition": "p16",
       "case_ids": [
-        "B-I1",
-        "T-S3",
-        "L-C2"
+        "L-S1",
+        "I3",
+        "B-N2"
       ],
       "question_order": [
         "compensatory",
@@ -1928,11 +2074,11 @@
       "slot": 148
     },
     {
-      "assignment_pattern": 287,
+      "condition": "p09",
       "case_ids": [
-        "L-S1",
-        "C3",
-        "T-N2"
+        "S2",
+        "B-C3",
+        "T-N1"
       ],
       "question_order": [
         "compensatory",
@@ -1941,11 +2087,11 @@
       "slot": 149
     },
     {
-      "assignment_pattern": 221,
+      "condition": "p13",
       "case_ids": [
-        "S3",
-        "T-N2",
-        "L-I1"
+        "L-N1",
+        "C3",
+        "B-S2"
       ],
       "question_order": [
         "compensatory",
@@ -1954,11 +2100,11 @@
       "slot": 150
     },
     {
-      "assignment_pattern": 114,
+      "condition": "p16",
       "case_ids": [
-        "T-N1",
-        "B-C3",
-        "L-I2"
+        "B-N2",
+        "I3",
+        "L-S1"
       ],
       "question_order": [
         "compensatory",
@@ -1967,11 +2113,11 @@
       "slot": 151
     },
     {
-      "assignment_pattern": 32,
+      "condition": "p01",
       "case_ids": [
-        "B-I1",
-        "L-C3",
-        "T-S2"
+        "B-N1",
+        "L-S2",
+        "T-C3"
       ],
       "question_order": [
         "compensatory",
@@ -1980,11 +2126,11 @@
       "slot": 152
     },
     {
-      "assignment_pattern": 158,
+      "condition": "p14",
       "case_ids": [
-        "T-N2",
-        "L-S3",
-        "I1"
+        "B-C2",
+        "S3",
+        "L-I1"
       ],
       "question_order": [
         "compensatory",
@@ -1993,11 +2139,11 @@
       "slot": 153
     },
     {
-      "assignment_pattern": 409,
+      "condition": "p05",
       "case_ids": [
-        "C1",
-        "T-I3",
-        "B-N2"
+        "T-S2",
+        "N1",
+        "L-C3"
       ],
       "question_order": [
         "compensatory",
@@ -2006,11 +2152,11 @@
       "slot": 154
     },
     {
-      "assignment_pattern": 56,
+      "condition": "p03",
       "case_ids": [
-        "T-C2",
-        "L-S3",
-        "B-N1"
+        "T-N3",
+        "B-C1",
+        "L-I2"
       ],
       "question_order": [
         "compensatory",
@@ -2019,11 +2165,11 @@
       "slot": 155
     },
     {
-      "assignment_pattern": 181,
+      "condition": "p14",
       "case_ids": [
-        "L-I2",
-        "T-S3",
-        "N1"
+        "L-I1",
+        "S3",
+        "B-C2"
       ],
       "question_order": [
         "compensatory",
@@ -2032,11 +2178,11 @@
       "slot": 156
     },
     {
-      "assignment_pattern": 396,
+      "condition": "p16",
       "case_ids": [
-        "T-N1",
-        "B-C2",
-        "S3"
+        "B-N2",
+        "L-S1",
+        "I3"
       ],
       "question_order": [
         "compensatory",
@@ -2045,11 +2191,11 @@
       "slot": 157
     },
     {
-      "assignment_pattern": 53,
+      "condition": "p06",
       "case_ids": [
-        "B-N3",
-        "T-I2",
-        "L-S1"
+        "L-S3",
+        "I1",
+        "T-C2"
       ],
       "question_order": [
         "compensatory",
@@ -2058,7 +2204,280 @@
       "slot": 158
     },
     {
-      "assignment_pattern": 85,
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "T-N2",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 159
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "B-I2",
+        "N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 160
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "L-S2",
+        "T-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 161
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "L-C2",
+        "T-S3",
+        "B-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 162
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "T-N3",
+        "B-C1",
+        "L-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 163
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "S1",
+        "T-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 164
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "L-S2",
+        "T-C3",
+        "B-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 165
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "I1",
+        "T-C2",
+        "L-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 166
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "N2",
+        "B-I3",
+        "T-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 167
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "I2",
+        "B-N3",
+        "T-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 168
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "B-N3",
+        "T-C1",
+        "I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 169
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "L-N3",
+        "C1",
+        "T-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 170
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "B-S2",
+        "L-N1",
+        "C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 171
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "L-I2",
+        "T-N3",
+        "B-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 172
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "L-S2",
+        "T-C3",
+        "B-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 173
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "L-S2",
+        "B-N1",
+        "T-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 174
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "C3",
+        "B-S2",
+        "L-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 175
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "T-N1",
+        "S2",
+        "B-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 176
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "L-C3",
+        "N1",
+        "T-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 177
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "B-I1",
+        "L-C2",
+        "T-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 178
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "L-I1",
+        "B-C2",
+        "S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 179
+    },
+    {
+      "condition": "p04",
       "case_ids": [
         "L-N2",
         "B-S1",
@@ -2068,20 +2487,1827 @@
         "compensatory",
         "punitive"
       ],
-      "slot": 159
+      "slot": 180
     },
     {
-      "assignment_pattern": 543,
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "N3",
+        "B-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 181
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "B-C3",
+        "T-N1",
+        "S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 182
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "B-I2",
+        "N3",
+        "L-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 183
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "N2",
+        "T-S1",
+        "B-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 184
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "B-S1",
+        "L-N2",
+        "T-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 185
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "B-S3",
+        "C2",
+        "T-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 186
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "N2",
+        "T-S1",
+        "B-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 187
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "B-I2",
+        "N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 188
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "B-N3",
+        "I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 189
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "T-N2",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 190
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "L-S3",
+        "I1",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 191
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "B-C1",
+        "T-N3",
+        "L-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 192
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "C1",
+        "T-I2",
+        "L-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 193
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "B-I3",
+        "N2",
+        "T-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 194
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "T-C2",
+        "L-S3",
+        "I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 195
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "L-C2",
+        "T-S3",
+        "B-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 196
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "S1",
+        "L-I3",
+        "T-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 197
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "I1",
+        "L-S3",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 198
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "T-N2",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 199
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "L-C3",
+        "T-S2",
+        "N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 200
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "T-S1",
+        "N2",
+        "B-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 201
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "T-S3",
+        "B-I1",
+        "L-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 202
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "T-C2",
+        "L-S3",
+        "I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 203
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "I2",
+        "B-N3",
+        "T-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 204
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "B-S3",
+        "C2",
+        "T-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 205
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "L-C2",
+        "B-I1",
+        "T-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 206
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "B-N3",
+        "I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 207
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "N3",
+        "B-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 208
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "T-C3",
+        "B-N1",
+        "L-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 209
+    },
+    {
+      "condition": "p02",
       "case_ids": [
         "B-I1",
+        "T-S3",
+        "L-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 210
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
         "L-N3",
+        "C1",
+        "T-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 211
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "I3",
+        "L-S1",
+        "B-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 212
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "B-S3",
+        "T-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 213
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "B-C3",
+        "S2",
+        "T-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 214
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "C1",
+        "T-I2",
+        "L-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 215
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "L-I2",
+        "B-C1",
+        "T-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 216
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "B-I2",
+        "N3",
+        "L-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 217
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "I2",
+        "B-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 218
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "T-I2",
+        "L-N3",
+        "C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 219
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "T-N2",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 220
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "B-I1",
+        "L-C2",
+        "T-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 221
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "L-N1",
+        "B-S2",
+        "C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 222
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "L-N3",
+        "T-I2",
+        "C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 223
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "T-N2",
+        "L-I3",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 224
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "N3",
+        "B-I2",
+        "L-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 225
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "S1",
+        "T-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 226
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "L-S2",
+        "T-C3",
+        "B-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 227
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "L-N1",
+        "C3",
+        "B-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 228
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "B-N3",
+        "I2",
+        "T-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 229
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "T-N1",
+        "S2",
+        "B-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 230
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "C3",
+        "B-S2",
+        "L-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 231
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "C1",
+        "T-I2",
+        "L-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 232
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "S2",
+        "T-N1",
+        "B-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 233
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "B-N2",
+        "L-S1",
+        "I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 234
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "S3",
+        "L-I1",
+        "B-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 235
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "L-S2",
+        "T-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 236
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "T-I3",
+        "L-N2",
+        "B-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 237
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "B-C3",
+        "S2",
+        "T-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 238
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "B-N2",
+        "I3",
+        "L-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 239
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "L-S2",
+        "T-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 240
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "B-N3",
+        "I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 241
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "B-C1",
+        "T-N3",
+        "L-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 242
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "B-C3",
+        "S2",
+        "T-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 243
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "L-S3",
+        "T-C2",
+        "I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 244
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "T-S3",
+        "L-C2",
+        "B-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 245
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "B-C2",
+        "L-I1",
+        "S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 246
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "T-S2",
+        "N1",
+        "L-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 247
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "T-I2",
+        "C1",
+        "L-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 248
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "T-S3",
+        "L-C2",
+        "B-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 249
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "L-S2",
+        "T-C3",
+        "B-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 250
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "N3",
+        "B-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 251
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "T-N2",
+        "S1",
+        "L-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 252
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "T-S2",
+        "L-C3",
+        "N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 253
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "N3",
+        "L-C1",
+        "B-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 254
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "T-S2",
+        "N1",
+        "L-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 255
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "I1",
+        "L-S3",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 256
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "L-S2",
+        "T-C3",
+        "B-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 257
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "S3",
+        "L-I1",
+        "B-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 258
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "T-N3",
+        "L-I2",
+        "B-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 259
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "T-N1",
+        "S2",
+        "B-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 260
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "B-C1",
+        "L-I2",
+        "T-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 261
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "L-S1",
+        "I3",
+        "B-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 262
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "I3",
+        "L-S1",
+        "B-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 263
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "S3",
+        "B-C2",
+        "L-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 264
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "B-S2",
+        "C3",
+        "L-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 265
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "L-N1",
+        "B-S2",
+        "C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 266
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "T-I2",
+        "C1",
+        "L-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 267
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "B-N2",
+        "L-S1",
+        "I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 268
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "T-N1",
+        "S2",
+        "B-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 269
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "I3",
+        "L-S1",
+        "B-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 270
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "B-S1",
+        "T-I3",
+        "L-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 271
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "L-N1",
+        "B-S2",
+        "C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 272
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "L-I1",
+        "S3",
+        "B-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 273
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "B-S2",
+        "C3",
+        "L-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 274
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "B-S3",
+        "T-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 275
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "L-N2",
+        "T-I3",
+        "B-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 276
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "I1",
+        "L-S3",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 277
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "B-I3",
+        "T-S1",
+        "N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 278
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "B-S1",
+        "L-N2",
+        "T-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 279
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "B-N3",
+        "I2",
+        "T-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 280
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "T-C3",
+        "L-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 281
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "L-C2",
+        "B-I1",
+        "T-S3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 282
+    },
+    {
+      "condition": "p01",
+      "case_ids": [
+        "B-N1",
+        "T-C3",
+        "L-S2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 283
+    },
+    {
+      "condition": "p02",
+      "case_ids": [
+        "T-S3",
+        "L-C2",
+        "B-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 284
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "I2",
+        "B-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 285
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "I2",
+        "B-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 286
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "B-C2",
+        "S3",
+        "L-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 287
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "T-S1",
+        "B-I3",
+        "N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 288
+    },
+    {
+      "condition": "p06",
+      "case_ids": [
+        "L-S3",
+        "I1",
+        "T-C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 289
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "T-I1",
+        "B-S3",
         "C2"
       ],
       "question_order": [
         "compensatory",
         "punitive"
       ],
-      "slot": 160
+      "slot": 290
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "T-I2",
+        "L-N3",
+        "C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 291
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "B-S3",
+        "T-I1",
+        "C2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 292
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "T-C1",
+        "I2",
+        "B-N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 293
+    },
+    {
+      "condition": "p13",
+      "case_ids": [
+        "B-S2",
+        "C3",
+        "L-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 294
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "L-N3",
+        "C1",
+        "T-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 295
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "S1",
+        "T-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 296
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "L-C1",
+        "B-I2",
+        "N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 297
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "I2",
+        "B-N3",
+        "T-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 298
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "B-S1",
+        "L-N2",
+        "T-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 299
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "L-C3",
+        "T-S2",
+        "N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 300
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "T-I3",
+        "L-N2",
+        "B-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 301
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "B-S1",
+        "T-I3",
+        "L-N2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 302
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "N2",
+        "T-S1",
+        "B-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 303
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "N3",
+        "B-I2",
+        "L-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 304
+    },
+    {
+      "condition": "p04",
+      "case_ids": [
+        "B-S1",
+        "L-N2",
+        "T-I3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 305
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "T-S2",
+        "N1",
+        "L-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 306
+    },
+    {
+      "condition": "p03",
+      "case_ids": [
+        "B-C1",
+        "T-N3",
+        "L-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 307
+    },
+    {
+      "condition": "p07",
+      "case_ids": [
+        "L-N3",
+        "T-I2",
+        "C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 308
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "T-S2",
+        "L-C3",
+        "N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 309
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "N3",
+        "L-C1",
+        "B-I2"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 310
+    },
+    {
+      "condition": "p15",
+      "case_ids": [
+        "B-I2",
+        "L-C1",
+        "N3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 311
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "B-C3",
+        "S2",
+        "T-N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 312
+    },
+    {
+      "condition": "p08",
+      "case_ids": [
+        "L-I3",
+        "T-N2",
+        "S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 313
+    },
+    {
+      "condition": "p09",
+      "case_ids": [
+        "S2",
+        "T-N1",
+        "B-C3"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 314
+    },
+    {
+      "condition": "p05",
+      "case_ids": [
+        "L-C3",
+        "T-S2",
+        "N1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 315
+    },
+    {
+      "condition": "p16",
+      "case_ids": [
+        "B-N2",
+        "I3",
+        "L-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 316
+    },
+    {
+      "condition": "p10",
+      "case_ids": [
+        "C2",
+        "B-S3",
+        "T-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 317
+    },
+    {
+      "condition": "p11",
+      "case_ids": [
+        "I2",
+        "B-N3",
+        "T-C1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 318
+    },
+    {
+      "condition": "p14",
+      "case_ids": [
+        "S3",
+        "B-C2",
+        "L-I1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 319
+    },
+    {
+      "condition": "p12",
+      "case_ids": [
+        "B-I3",
+        "N2",
+        "T-S1"
+      ],
+      "question_order": [
+        "compensatory",
+        "punitive"
+      ],
+      "slot": 320
     }
   ]
 }
