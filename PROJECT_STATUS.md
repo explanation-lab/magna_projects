@@ -1,6 +1,6 @@
 # Project status
 
-- Last updated: November 10, 2026.
+- Last updated: November 11, 2026.
 - Current stage: Pilot 1 materials and offline researcher review.
 - Active study: `code/experiments/pilot 1/`.
 - Project Lead: not separately assigned.
@@ -10,11 +10,11 @@
 
 Pilot 1 contains the current single-file study and matching review ZIP. It includes all 48 vignette versions, three-case assignments with one case per outcome, consent, instructions, two comprehension checks, case ratings, three optional demographics, feedback, and reviewer controls.
 
-The latest content changes make Yes correct for both comprehension checks, remove the check heading, and limit demographics to age, sex, and ethnicity.
+The latest changes incorporate Laura’s question wording, case-specific party names, estate plaintiffs in death cases, revised scale anchors, and question order randomized between sessions and fixed within a session. A factual product question follows all six ratings with the relevant case visible. Reading-screen durations and the factual response are exported for diagnostics. The planned exploratory sample is 160 completed participants, with a balanced allocation file containing 80 slots per question order and 10 evaluations per vignette.
 
 ## Verification
 
-The study logic checks passed for all 48 narratives, all 576 assignment patterns, comprehension failures and retries, the complete six-rating flow, demographics, and exports. An offline Chrome walkthrough also verified all six ratings and both export formats. The ZIP contains only `index.html`, identical to the standalone file.
+Offline Chrome checks passed for both fixed question orders, all 48 case-specific questions and plaintiff descriptions, all 576 assignment patterns, and all 160 planned allocation slots. Full six-rating walkthroughs verified comprehension retries, correct and incorrect factual answers, optional demographics, reading-screen durations, and JSON/CSV exports. The allocation plan gives each vignette 10 evaluations overall and 5 per question order. The ZIP contains only `index.html`, identical to the standalone file.
 
 ## Repository
 
