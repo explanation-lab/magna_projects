@@ -124,20 +124,14 @@ const QUESTIONS = {
 };
 const QUESTION_ORDERS = [['compensatory', 'punitive'], ['punitive', 'compensatory']];
 let questionOrder = QUESTION_ORDERS[randomInt(QUESTION_ORDERS.length)].slice();
-const PRODUCTS = {
-  shelving: 'A wall-mounted shelving unit',
-  bicycle: 'A bicycle',
-  ladder: 'A folding ladder',
-  treadmill: 'A treadmill'
-};
-const FACTUAL_QUESTION = 'Which product was involved in this case?';
+const ATTENTION_QUESTION = '21 is an even number.';
 function questionFor(c, type) {
   return QUESTIONS[type].replace('{plaintiff}', c.plaintiff).replace('{company}', c.company);
 }
 const CHECKS={punitive_check:{question:'Are punitive damages intended to punish the company being sued and discourage similar conduct?',correct:'yes'},compensatory_check:{question:'Are compensatory damages intended to compensate for harm and losses?',correct:'yes'}};
 function caseStages() { return ['read', ...questionOrder]; }
-const STAGE_LABELS={read:'Read case',compensatory:'Compensatory rating',punitive:'Punitive rating',factual_check:'Case question'};
-const VERSION='magna-offline-review-2026-11-11-v5';
+const STAGE_LABELS={read:'Read case',compensatory:'Compensatory rating',punitive:'Punitive rating'};
+const VERSION='magna-offline-review-2026-11-11-v6';
 const SOURCE='https://docs.google.com/document/d/1oLGjqQyQle6a6qhMKSGFK2zdYTmyyLth1tSM5gDxU7A/edit';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -163,14 +157,13 @@ function assignmentFor(number) {
 }
 let assignmentNumber=randomInt(assignmentCount)+1,assignment=shuffle(assignmentFor(assignmentNumber));
 let mode='session',screenIndex=0,inspectIndex=0,inspectStage='read',shownAt=performance.now();
-let sessionId=makeId(),records=[],history=[],factualRecords=[];
-let factualCaseIndex=randomInt(assignment.length);
+let sessionId=makeId(),records=[],history=[],attentionRecords=[];
 let consented=false,declined=false,demographicValues=null,feedbackValue='',finished=false;
 let checkAnswers={},checkRecords=[],checkAttempt=0,checksPassed=false,showCheckReminder=false;
 const materials={shared:{"consent_title": "CONSENT FORM", "consent_study_overview": "Thank you for agreeing to take part in this study. We appreciate your time and effort. In this study, we will present you with fictional scenarios and ask you to answer a brief series of questions about them. The questions have no right or wrong answers—we’re exploring features of human psychology in this research. You will be paid for your time and effort. We do not anticipate any risks from participating in this research. While you will not directly benefit from taking part in this research study, we hope society and the scientific community will benefit from the knowledge gained about human psychology and judgment.", "consent_duration_voluntary": "Your involvement is expected to take no more than 10 minutes. Your participation is voluntary and you can stop at any time. If you consent to take part in this study, please indicate so below. If not, you may exit the study.", "consent_privacy": "The research data will be collected anonymously. We will not ask you to provide personally identifiable information such as your name or email address, and we will not be able to link your responses to you. We anticipate that your participation presents no greater risk than everyday use of the Internet. Please note that there is always a possible risk of intrusion by outside agents whenever information is shared over the Internet.", "consent_contact": "If you have any questions about the research study, please contact Shaun Nichols (sbn44@cornell.edu) at Cornell University. If you have any questions or concerns regarding your rights as a subject in this study, you may contact the Institutional Review Board (IRB) for Human Participants at 607-255-5138 or access their website at http://www.irb.cornell.edu. You may also report your concerns or complaints anonymously through Ethicspoint online at www.hotline.cornell.edu or by calling toll free at 1-866-293-3077. Ethicspoint is an independent organization that serves as a liaison between the University and the person bringing the complaint so that anonymity can be ensured.", "consent_rights": "Taking part in this study is voluntary. You can stop at any time. Withdrawal or refusal to participate will not result in any penalty. You do not waive any legal rights or release any agent from liability for negligence by consenting to participate.", "consent_prompt": "If you consent to take part in this study, please indicate so below:", "consent_button_yes": "I consent", "consent_button_no": "I do NOT consent", "instructions_intro": "In this study, you will read a series of short situations. After each situation, you will be asked to make judgments about different sentences describing what happened.", "instructions_read_carefully": "Please read each situation and sentence carefully before answering.", "button_begin_study": "Begin study", "button_continue": "Continue", "button_next": "Next", "demo_sex_question": "Please indicate your sex.", "demo_sex_male": "Male", "demo_sex_female": "Female", "demo_sex_other": "Other", "demo_sex_prefer_not": "Prefer not to answer", "demo_age_question": "Please indicate your age (in years).", "demo_age_instruction": "Enter a whole number from 18 to 120.", "demo_birth_country_question": "What country were you born in?", "demo_birth_country_open": "[Open text]", "demo_current_country_question": "What country do you currently live in?", "demo_current_country_open": "[Open text]", "demo_race_ethnicity_question": "What is your race or ethnicity?", "demo_race_ethnicity_open": "[Open text]", "demo_first_language_question": "What is your native or first language?", "demo_first_language_open": "[Open text]", "demo_other_languages_question": "Do you speak any other languages?", "demo_other_languages_no": "No", "demo_other_languages_yes": "Yes", "demo_other_languages_if_yes": "If yes, please list each language you speak:", "demo_other_languages_open": "[Open text]", "demo_everyday_language_question": "What language do you currently use most often in everyday life?", "demo_everyday_language_open": "[Open text]"}};
 const config={duration:'about 10 minutes',compensation:'You will be paid $1.50 for your time and efforts.'};
 function makeId(){return 'review-'+Date.now().toString(36)+'-'+randomInt(1000000).toString(36)}
-function screens(){return [{stage:'consent'},{stage:'instructions'},{stage:'punitive_check'},{stage:'compensatory_check'},...assignment.flatMap((c,i)=>caseStages().map(stage=>({stage,case:c,position:i+1}))),{stage:'factual_check',case:assignment[factualCaseIndex],position:factualCaseIndex+1},{stage:'demographics'},{stage:'feedback'},{stage:'complete'}]}
+function screens(){return [{stage:'consent'},{stage:'instructions'},{stage:'punitive_check'},{stage:'compensatory_check'},...assignment.flatMap((c,i)=>caseStages().map(stage=>({stage,case:c,position:i+1}))),{stage:'demographics'},{stage:'feedback'},{stage:'attention_check'},{stage:'complete'}]}
 function current(){return declined?{stage:'declined'}:mode==='session'?screens()[screenIndex]:{stage:inspectStage,case:BANK[inspectIndex],position:1}}
 function keyFor(c,q,pos){return `${sessionId}|${mode}|${pos}|${c.id}|${q}`}
 function prior(c,q,pos){return records.find(r=>r.key===keyFor(c,q,pos))}
@@ -198,7 +191,7 @@ function page(content,classes=''){return `<section class="page ${classes}">${con
 
 function story(c){return `<div class="story-block"><strong class="read-instruction">Please read the following very carefully before answering any questions.</strong><article class="story" aria-label="Case narrative">${c.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}</article></div>`}
 function instructions(){return page(`<h1>Instructions</h1>${showCheckReminder?'<p class="notice" role="alert">One of your answers was incorrect. Please read the instructions again, then answer both questions.</p>':''}<p>In this study, you will read about legal cases involving civil suits. After each situation, you will be asked to make judgments about awarding damages to the plaintiff.</p><p>The plaintiff is the party bringing the lawsuit and seeking damages. You will rate how strong your desire is to award compensatory damages to the plaintiff and punitive damages against the company. Compensatory damages compensate for harm and losses. Punitive damages punish the company being sued and discourage similar conduct.</p><p>When you're ready to begin, click Begin below.</p><button id="continue">Begin</button>`,'simple-page instructions-page')}
-function comprehension(s){return page(`<details><summary>Review the damages definitions</summary><p>Compensatory damages compensate for harm and losses. Punitive damages punish the company being sued and discourage similar conduct.</p></details><p>${esc(CHECKS[s.stage].question)}</p><div class="consent-actions"><button id="check-yes">Yes</button><button id="check-no">No</button></div>`,'simple-page instructions-page')}
+function comprehension(s){return page(`<p>${esc(CHECKS[s.stage].question)}</p><div class="consent-actions"><button id="check-yes">Yes</button><button id="check-no">No</button></div>`,'simple-page instructions-page')}
 function answerCheck(answer){const s=current(),check=CHECKS[s.stage];if(!check)return;const correct=answer===check.correct;
 if(!checkAttempt)checkAttempt=1;
 checkRecords.push({session_id:sessionId,attempt:checkAttempt,stage:s.stage,question:check.question,answer,correct,rt_ms:Math.round(performance.now()-shownAt),recorded_at:new Date().toISOString()});
@@ -212,21 +205,30 @@ function caseScreen(s){let content=story(s.case);
 if(s.stage==='read')content+='<div class="story-action"><button id="continue">Continue</button></div>';
 else content+=`<section class="question-card sentence-slot active" aria-label="Damages rating"><span class="sentence-text" id="question-text" tabindex="-1">${esc(questionFor(s.case,s.stage))}</span>${scale(s.case,s.stage,s.position)}</section>`;
 return page(content)}
-function factualCheck(s) {
-  const priorAnswer = factualRecords.find(record => record.session_id === sessionId)?.answer || '';
-  const options = Object.entries(PRODUCTS).map(([value, label]) =>
-    `<option value="${value}" ${priorAnswer === value ? 'selected' : ''}>${esc(label)}</option>`
-  ).join('');
-  return page(`${story(s.case)}<div class="field"><label for="factual-answer">${FACTUAL_QUESTION}</label>
-    <select id="factual-answer"><option value="">Select a product</option>${options}</select></div>
-    <div class="story-action"><button id="continue" ${priorAnswer ? '' : 'disabled'}>Continue</button></div>`);
+function attentionCheck() {
+  return page(`<p>${ATTENTION_QUESTION}</p><div class="consent-actions">
+    <button id="attention-yes">Yes</button><button id="attention-no">No</button>
+  </div>`, 'simple-page instructions-page');
+}
+function answerAttention(answer) {
+  attentionRecords = attentionRecords.filter(record => record.session_id !== sessionId);
+  attentionRecords.push({
+    session_id: sessionId,
+    question: ATTENTION_QUESTION,
+    answer,
+    correct: answer === 'no',
+    rt_ms: Math.round(performance.now() - shownAt),
+    recorded_at: new Date().toISOString(),
+    study_version: VERSION
+  });
+  advance();
 }
 function feedback(){return page('<h1>Feedback</h1><form id="feedback-form"><div class="field"><label for="feedback">Do you have any feedback about any part of this study? <span class="optional">(optional)</span></label><textarea id="feedback" name="feedback" rows="5"></textarea></div><button type="submit">Finish</button></form>','simple-page')}
 function completion(){return page('<h1>Review complete</h1><p>No responses were submitted. Use the review panel to inspect another screen.</p>','simple-page')}
-function screenHTML(s){if(s.stage==='factual_check')return factualCheck(s);if(s.case)return caseScreen(s);if(CHECKS[s.stage])return comprehension(s);if(s.stage==='consent')return consent();if(s.stage==='instructions')return instructions();if(s.stage==='demographics')return demographics();if(s.stage==='feedback')return feedback();if(s.stage==='declined')return page('<p>Thank you. You have not consented, and no study responses have been submitted. You may close this window.</p>','simple-page');return completion()}
-function updatePanel(){const s=current();fill('screen',screens().map((s,i)=>[i,s.case?`${s.position}. ${s.case.id} · ${CONTEXTS[s.case.context]} · ${STAGE_LABELS[s.stage]}`:({consent:'Consent',instructions:'Instructions',punitive_check:'Punitive damages check',compensatory_check:'Compensatory damages check',demographics:'About you',feedback:'Feedback',complete:'Completion'})[s.stage]]));$('screen').value=mode==='session'?screenIndex:'';
-if(s.case){$('context').value=s.case.context;$('category').value=s.case.category;$('outcome').value=s.case.id.slice(-1);$('inspect-stage').value=s.stage==='factual_check'?'read':s.stage}
-$('review-status').textContent=mode==='session'?`Three-case walkthrough · ${s.case?`${s.case.id} · ${CATEGORIES[s.case.category]} · ${OUTCOMES[s.case.id.slice(-1)]}`:({consent:'Consent',instructions:'Instructions',punitive_check:'Punitive damages check',compensatory_check:'Compensatory damages check',demographics:'About you',feedback:'Feedback',complete:'Complete',declined:'Did not consent'})[s.stage]} · No responses are submitted.`:`Case bank · ${s.case.id} · ${CONTEXTS[s.case.context]} · ${CATEGORIES[s.case.category]} · ${OUTCOMES[s.case.id.slice(-1)]} · ${inspectIndex+1} of 48 versions`;
+function screenHTML(s){if(s.stage==='attention_check')return attentionCheck();if(s.case)return caseScreen(s);if(CHECKS[s.stage])return comprehension(s);if(s.stage==='consent')return consent();if(s.stage==='instructions')return instructions();if(s.stage==='demographics')return demographics();if(s.stage==='feedback')return feedback();if(s.stage==='declined')return page('<p>Thank you. You have not consented, and no study responses have been submitted. You may close this window.</p>','simple-page');return completion()}
+function updatePanel(){const s=current();fill('screen',screens().map((s,i)=>[i,s.case?`${s.position}. ${s.case.id} · ${CONTEXTS[s.case.context]} · ${STAGE_LABELS[s.stage]}`:({consent:'Consent',instructions:'Instructions',punitive_check:'Punitive damages check',compensatory_check:'Compensatory damages check',demographics:'About you',feedback:'Feedback',attention_check:'Attention check',complete:'Completion'})[s.stage]]));$('screen').value=mode==='session'?screenIndex:'';
+if(s.case){$('context').value=s.case.context;$('category').value=s.case.category;$('outcome').value=s.case.id.slice(-1);$('inspect-stage').value=s.stage}
+$('review-status').textContent=mode==='session'?`Three-case walkthrough · ${s.case?`${s.case.id} · ${CATEGORIES[s.case.category]} · ${OUTCOMES[s.case.id.slice(-1)]}`:({consent:'Consent',instructions:'Instructions',punitive_check:'Punitive damages check',compensatory_check:'Compensatory damages check',demographics:'About you',feedback:'Feedback',attention_check:'Attention check',complete:'Complete',declined:'Did not consent'})[s.stage]} · No responses are submitted.`:`Case bank · ${s.case.id} · ${CONTEXTS[s.case.context]} · ${CATEGORIES[s.case.category]} · ${OUTCOMES[s.case.id.slice(-1)]} · ${inspectIndex+1} of 48 versions`;
 $('previous-screen').disabled=mode==='session'?screenIndex===0:caseStages().indexOf(inspectStage)===0;
 $('next-screen').disabled=mode==='session'?screenIndex===screens().length-1:caseStages().indexOf(inspectStage)===caseStages().length-1;
 $('response-count').textContent=`${records.length} review ratings in this tab`;
@@ -236,11 +238,14 @@ $('assignment-description').textContent=`Assignment pattern ${assignmentNumber} 
 function render(keepQuestionPosition=false){const oldY=window.scrollY,s=current();shownAt=performance.now();$('study').innerHTML=screenHTML(s);updatePanel();
 document.querySelectorAll('input[name="rating"]').forEach(input=>input.addEventListener('change',()=>{$('continue').disabled=false}));
 $('continue')?.addEventListener('click',advance);
-if(s.stage==='factual_check')$('factual-answer').onchange=()=>{$('continue').disabled=!$('factual-answer').value};
+if(s.stage==='attention_check'){
+  $('attention-yes').onclick=()=>answerAttention('yes');
+  $('attention-no').onclick=()=>answerAttention('no');
+}
 if(CHECKS[s.stage]){$('check-yes').onclick=()=>answerCheck('yes');$('check-no').onclick=()=>answerCheck('no')}
 if(s.stage==='consent'){
  $('consent-yes').onclick=()=>{consented=true;advance()};
- $('consent-no').onclick=()=>{consented=false;declined=true;finished=false;records=[];history=[];factualRecords=[];demographicValues=null;feedbackValue='';checkAnswers={};checkRecords=[];checkAttempt=0;checksPassed=false;showCheckReminder=false;render()};
+ $('consent-no').onclick=()=>{consented=false;declined=true;finished=false;records=[];history=[];attentionRecords=[];demographicValues=null;feedbackValue='';checkAnswers={};checkRecords=[];checkAttempt=0;checksPassed=false;showCheckReminder=false;render()};
 }
 if(s.stage==='demographics'){
  if(demographicValues)for(const [key,value] of Object.entries(demographicValues))if($(key))$(key).value=value??'';
@@ -263,24 +268,6 @@ function advance() {
   const rating = QUESTIONS[s.stage] ? document.querySelector('input[name="rating"]:checked') : null;
   if (QUESTIONS[s.stage] && !rating) return;
   const rt = Math.round(performance.now() - shownAt);
-  if (s.stage === 'factual_check') {
-    const answer = $('factual-answer').value;
-    if (!answer) return;
-    const record = {
-      session_id: sessionId,
-      case_id: s.case.id,
-      case_position: s.position,
-      question: FACTUAL_QUESTION,
-      answer,
-      answer_label: PRODUCTS[answer],
-      correct: answer === s.case.context,
-      rt_ms: rt,
-      recorded_at: new Date().toISOString(),
-      study_version: VERSION
-    };
-    factualRecords = factualRecords.filter(record => record.session_id !== sessionId);
-    factualRecords.push(record);
-  }
   if (s.stage === 'instructions') {
     checkAttempt++;
     checkAnswers = {};
@@ -348,7 +335,7 @@ function inspectSelected(){const c=BANK.find(c=>c.context===$('context').value&&
 function moveScreen(delta){declined=false;if(mode==='session')screenIndex=Math.max(0,Math.min(screens().length-1,screenIndex+delta));else inspectStage=caseStages()[Math.max(0,Math.min(caseStages().length-1,caseStages().indexOf(inspectStage)+delta))];render()}
 function payload() {
   const sessionRecords = records.filter(record => record.mode === 'session' && record.session_id === sessionId);
-  const factualAnswered = factualRecords.some(record => record.session_id === sessionId);
+  const attentionAnswered = attentionRecords.some(record => record.session_id === sessionId);
   return {
     study_version: VERSION,
     source_document: SOURCE,
@@ -368,13 +355,13 @@ function payload() {
     scale: { min: 1, max: 7, min_label: 'Not at all strong', max_label: 'Extremely strong' },
     questions: QUESTIONS,
     question_order: questionOrder.slice(),
-    factual_checks: factualRecords,
+    attention_checks: attentionRecords,
     reading_times: history.filter(record => record.stage === 'read'),
     consented,
     comprehension: { passed: checksPassed, attempts: checkRecords.filter(record => record.session_id === sessionId) },
     demographics: demographicValues,
     feedback: feedbackValue,
-    completed: finished && factualAnswered && sessionRecords.length === assignment.length * Object.keys(QUESTIONS).length,
+    completed: finished && attentionAnswered && sessionRecords.length === assignment.length * Object.keys(QUESTIONS).length,
     records: records.map(({ key, ...record }) => record),
     screen_history: history
   };
@@ -390,19 +377,19 @@ function download(type) {
       'session_id', 'review_mode', 'valid_participant_data', 'assignment_pattern', 'mode',
       'case_position', 'case_id', 'context', 'category', 'outcome', 'question_position',
       'question_type', 'question', 'question_order', 'plaintiff', 'company', 'reading_time_ms',
-      'factual_check_answer', 'factual_check_correct', 'factual_check_rt_ms', 'rating',
+      'attention_check_answer', 'attention_check_correct', 'attention_check_rt_ms', 'rating',
       'scale_min', 'scale_max', 'rt_ms', 'recorded_at', 'study_version'
     ];
     const cell = value => '"' + String(value ?? '').replace(/"/g, '""') + '"';
     const rows = data.records.map(record => {
-      const factual = data.factual_checks.find(check =>
-        record.mode === 'session' && check.session_id === record.session_id && check.case_id === record.case_id
+      const attention = data.attention_checks.find(check =>
+        record.mode === 'session' && check.session_id === record.session_id
       );
       return {
         ...record,
-        factual_check_answer: factual?.answer,
-        factual_check_correct: factual?.correct,
-        factual_check_rt_ms: factual?.rt_ms
+        attention_check_answer: attention?.answer,
+        attention_check_correct: attention?.correct,
+        attention_check_rt_ms: attention?.rt_ms
       };
     });
     text = [columns.map(cell).join(','), ...rows.map(row => columns.map(column => cell(row[column])).join(','))].join('\r\n');
@@ -424,7 +411,7 @@ $('next-case').onclick=()=>{const c=current().case;declined=false;inspectIndex=(
 $('screen').onchange=()=>{declined=false;mode='session';screenIndex=Number($('screen').value);render()};
 $('previous-screen').onclick=()=>moveScreen(-1);$('next-screen').onclick=()=>moveScreen(1);
 $('start-session').onclick=()=>{declined=false;mode='session';screenIndex=0;render()};
-$('new-session').onclick=()=>{assignmentNumber=randomInt(assignmentCount)+1;assignment=shuffle(assignmentFor(assignmentNumber));questionOrder=QUESTION_ORDERS[randomInt(QUESTION_ORDERS.length)].slice();factualCaseIndex=randomInt(assignment.length);sessionId=makeId();consented=false;demographicValues=null;feedbackValue='';finished=false;declined=false;checkAnswers={};checkAttempt=0;checksPassed=false;showCheckReminder=false;mode='session';screenIndex=0;render()};
+$('new-session').onclick=()=>{assignmentNumber=randomInt(assignmentCount)+1;assignment=shuffle(assignmentFor(assignmentNumber));questionOrder=QUESTION_ORDERS[randomInt(QUESTION_ORDERS.length)].slice();sessionId=makeId();consented=false;demographicValues=null;feedbackValue='';finished=false;declined=false;checkAnswers={};checkAttempt=0;checksPassed=false;showCheckReminder=false;mode='session';screenIndex=0;render()};
 $('download-json').onclick=()=>download('json');$('download-csv').onclick=()=>download('csv');
 globalThis.magnaReview={bank:BANK,assignmentFor,exportData:payload,get assignment(){return assignment},get current(){return current()},get mode(){return mode},get assignmentNumber(){return assignmentNumber},get questionOrder(){return questionOrder.slice()}};
 render();
