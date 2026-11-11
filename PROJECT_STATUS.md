@@ -8,13 +8,13 @@
 
 ## Current work
 
-Pilot 1 contains the current single-file study and matching review ZIP. It includes all 48 vignette versions, four-case assignments, consent, instructions, two comprehension checks, case ratings, three optional demographics, feedback, and reviewer controls.
+Pilot 1 contains the current single-file study and matching review ZIP. It includes all 48 vignette versions, three-case assignments with one case per outcome, consent, instructions, two comprehension checks, case ratings, three optional demographics, feedback, and reviewer controls.
 
 The latest content changes make Yes correct for both comprehension checks, remove the check heading, and limit demographics to age, sex, and ethnicity.
 
 ## Verification
 
-The study logic checks passed for all 48 narratives, all 864 assignment patterns, comprehension failures and retries, the complete eight-rating flow, demographics, and exports. The ZIP contains only `index.html`, identical to the standalone file. Browser rendering could not be tested in the current environment.
+The study logic checks passed for all 48 narratives, all 576 assignment patterns, comprehension failures and retries, the complete six-rating flow, demographics, and exports. An offline Chrome walkthrough also verified all six ratings and both export formats. The ZIP contains only `index.html`, identical to the standalone file.
 
 ## Repository
 

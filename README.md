@@ -6,9 +6,9 @@ Research materials for studying judgments about compensatory and punitive damage
 
 The current review study is in [code/experiments/pilot 1/](code/experiments/pilot%201/). Open its `index.html` directly in a browser. The same folder contains `Magna_Pilot_Review.zip`, which packages that single HTML file for review.
 
-The bank contains 48 versions: four contexts × four case categories × three outcomes (death, brain injury, and neck/back injury). A session presents four distinct contexts, one case from each category, and all three outcomes with one repeated.
+The bank contains 48 versions: four contexts × four case categories × three outcomes (death, brain injury, and neck/back injury). A session presents three cases with distinct contexts and categories, one case for each outcome. The 576 possible assignments give all 48 versions equal representation across the full set.
 
-The flow is consent, instructions, two yes/no comprehension checks, four cases with compensatory and punitive ratings, optional age/sex/ethnicity demographics, and feedback. Both comprehension checks require Yes; an incorrect answer returns to the instructions and restarts both checks. Each case appears before its questions, with no question-preview screen or case counter. Ratings use a seven-point scale.
+The flow is consent, instructions, two yes/no comprehension checks, three cases with compensatory and punitive ratings, optional age/sex/ethnicity demographics, and feedback. Both comprehension checks require Yes; an incorrect answer returns to the instructions and restarts both checks. Each case appears before its questions, with no question-preview screen or case counter. Ratings use a seven-point scale.
 
 This is an offline review build. It does not submit responses; the reviewer panel can export review JSON and CSV. Server allocation, recruitment, and participant-data collection are not implemented.
 
